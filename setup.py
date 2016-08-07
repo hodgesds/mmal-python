@@ -8,7 +8,7 @@ setup(
     author           = "Daniel Hodges",
     author_email     = "hodges.daniel.scott@gmail.com",
     scripts          = [ "bin/mmal" ],
-    install_requires = [ "mmal-proto", "grpcio" ],
+    install_requires = [ "mmal-proto", "grpcio", "sqlalchemy" ],
     test_suite       = "",
     tests_require    = [ "tox", "nose" ],
     packages         = find_packages(
