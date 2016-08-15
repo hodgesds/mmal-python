@@ -1,10 +1,16 @@
 # MMAL: Meteorological Middleware Application Layer
 MMAL is a set of libraries designed to make handling time series meteorological
-a simple task.
+a simple task. It is designed to provide file system like abstraction layer to
+interact with databases.
 
-To understand the uses of MMAL lets start with an example.
+# Installation
+
+`pip install mmal`
+
 
 ## Example
+To understand the uses of MMAL lets start with an example.
+
 Lets create a database using sqlite and and some data:
 
 ```sh

@@ -53,3 +53,21 @@ class Client(object):
         req.type = req.TIMESERIES
 
         return self.request(req)
+
+    def apply(self, paths, f, offset=0, limit=10):
+        """
+        apply takes a function and returns a generator of the results of the
+        callable applied to all paths
+        """
+        if not hasattr(f, '__call__'):
+            raise TypeError("f must be a callable")
+
+        reply = self.path_request(paths)
+
+        for path in reply.path_reply.paths[:]:
+            yield f(self.ts_request(
+                [path.parts[:]],
+                cols   = path.columns[:],
+                offset = offset,
+                limit  = limit,
+            ))
