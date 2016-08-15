@@ -4,7 +4,7 @@ setup(
     name             = "mmal",
     description      = "Meteorological Middleware Application Layer",
     url              = "https://github.com/hodgesds/mmal-python",
-    version          = "0.0.2",
+    version          = "0.0.3",
     author           = "Daniel Hodges",
     author_email     = "hodges.daniel.scott@gmail.com",
     scripts          = [ "bin/mmal" ],
